@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  main {
+    flex: 3;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  aside {
+    flex: 1;
+    background-color: #f1f3f5;
+    padding: 20px;
+  }
