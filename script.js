@@ -85,6 +85,9 @@ document.getElementById("btnCopy").addEventListener("click", function () {
     .catch(function (err) {
       showNotification("No se pudo copiar el texto: " + err);
     });
+
+  noText.classList.remove("ocultarElement");
+  outputContainer.classList.add("ocultarElement");
 });
 
 //Mostrar un mensaje de copiado
