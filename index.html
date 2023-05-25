@@ -6,29 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <img src="images/Logo.svg" alt="Logo" />
+    </header>
     <div class="container">
-      <head>
-        <p>A</p>
-      </head>
-      <!-- <head>
-        <h1>G</h1>
-      </head> -->
       <main>
+        <div id="notification" class="hide">
+          Texto copiado al portapapeles exitosamente!
+        </div>
         <textarea
           id="inputText"
+          class="textMain"
           rows="4"
           cols="50"
-          placeholder="Escribe tu mensaje aquí"
+          placeholder="Ingresa el texto aqui"
         ></textarea
         ><br />
-        <button id="encryptButton">Encriptar</button>
-        <button id="decryptButton">Desencriptar</button>
+        <div class="btnGroup">
+          <div>
+            <img src="images/Vector.svg" alt="Vector" />
+            <p>Solo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="btss">
+            <button id="encryptButton">Encriptar</button>
+            <button id="decryptButton">Desencriptar</button>
+          </div>
+        </div>
       </main>
       <aside>
-        <h2>Mensaje:</h2>
-        <p id="outputText"></p>
+        <div id="noText" class="noText">
+          <img
+            id="myImage"
+            onclick="changeImage()"
+            src="images/ImgText.svg"
+            class="imgText"
+          />
+          <h3>Ningún mensaje fue encontrado</h3>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div id="outputContainer" class="outputContainer ocultarElement">
+          <p id="outputText"></p>
+          <button id="btnCopy">Copiar</button>
+        </div>
       </aside>
     </div>
     <script src="script.js"></script>
